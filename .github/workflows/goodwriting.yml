@@ -1,5 +1,3 @@
-name: Markdown Linter
-
 on:
   pull_request:
     paths:
@@ -10,12 +8,16 @@ on:
     paths:
       - '**/*.md'
 
+name: Markdown Linter
+permissions: {}
+
 jobs:
   lint:
     runs-on: ubuntu-latest
     name: Lint Markdown files with write-good
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Run write-good
         uses: ./goodwriting
+        
