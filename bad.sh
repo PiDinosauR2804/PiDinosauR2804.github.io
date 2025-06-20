@@ -1,1 +1,2 @@
-#!/bin/bash\necho $2
+#!/bin/bash\necho $1
+
