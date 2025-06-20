@@ -1,0 +1,44 @@
+# name: Markdown Linter (write-good)
+
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     paths:
+#       - '**.md'
+
+# permissions: {}
+
+# jobs:
+#   writegood:
+#     name: Check Markdown with write-good
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
+
+#       - name: Run custom write-good linter
+#         uses: ./.github/actions/goodwriting
+
+name: Markdown Linter
+
+on:
+  pull_request:
+    paths:
+      - '**/*.md'
+  push:
+    branches:
+      - master
+    paths:
+      - '**/*.md'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    name: Lint Markdown files with write-good
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run write-good
+        uses: ./goodwriting
