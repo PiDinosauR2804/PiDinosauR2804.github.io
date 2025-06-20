@@ -1,2 +1,4 @@
 #!/bin/bash
-for file in: $(ls); do echo "$file"; done
+for file in *; do 
+    echo "$file"; 
+done
