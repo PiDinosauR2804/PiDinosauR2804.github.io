@@ -1,6 +1,0 @@
-name: "Markdown Linter"
-description: "Check .md files with write-good"
-runs:
-  using: "docker"
-  image: "Dockerfile"
-
