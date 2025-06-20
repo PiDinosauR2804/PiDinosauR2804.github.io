@@ -1,1 +1,1 @@
-#!/bin/bash\necho $1
+#!/bin/bash\necho $2
