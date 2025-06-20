@@ -11,8 +11,15 @@ jobs:
     name: Shellcheck
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+      - name: Run ShellCheck
+        uses: ludeeus/action-shellcheck@master
+        
+  lint:
+    runs-on: ubuntu-latest
+    name: Lint Markdown files with write-good
+    steps:
       - uses: actions/checkout@v3
-      # - name: Run ShellCheck
-      #   uses: ludeeus/action-shellcheck@master
+
       - name: Run write-good
-        uses: ./goodwriting
+        uses: ./goodwriting 

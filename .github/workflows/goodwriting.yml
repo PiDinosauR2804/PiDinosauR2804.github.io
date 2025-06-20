@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Lint Markdown files with write-good
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
       - name: Run write-good
         uses: ./goodwriting
